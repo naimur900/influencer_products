@@ -29,10 +29,10 @@ nav {
   background-color: #e91e63;
   color: whitesmoke;
 }
-.dropdown {
+#dropdown {
   display: none;
 }
-.dropdown ul {
+#dropdown ul {
   display: none;
   position: absolute;
   background-color: #101632;
@@ -43,10 +43,10 @@ nav {
   list-style-type: none;
   border-radius: 5px;
 }
-.dropdown ul li {
+#dropdown ul li {
   margin: 5px;
 }
-.dropdown .fa-chevron-circle-down {
+#dropdown .fa-chevron-circle-down {
   margin-right: 20px;
 }
 nav > div {
@@ -123,6 +123,9 @@ hr {
   height: 200px;
   width: 200px;
 }
+.star-icon{
+  color: orange;
+}
 .see-more {
   padding: 6px;
 }
@@ -181,13 +184,13 @@ footer {
     display: none;
   }
 
-  nav .dropdown {
+  #dropdown {
     display: block;
   }
 
-  .dropdown-icon:hover .dropdown>ul{
+  #dropdown-icon:hover #dropdown ul {
         display: block;
-    }
+  }
 
   .intro-section {
     width: 100%;
