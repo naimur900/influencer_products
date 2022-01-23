@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Outfit:wght@200;300;400&display=swap");
+body {
+  margin: 0%;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
+  /* background-color: rgb(175, 190, 190);
+  background-color: white; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 90%;
+}
+
+/* Navbar Starts */
+nav {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e91e63;
+  color: whitesmoke;
+}
+.dropdown {
+  display: none;
+}
+.dropdown ul {
+  display: none;
+  position: absolute;
+  background-color: #101632;
+  opacity: calc(90%);
+  top: 45px;
+  right: 12px;
+  padding: 20px;
+  list-style-type: none;
+  border-radius: 5px;
+}
+.dropdown ul li {
+  margin: 5px;
+}
+.dropdown .fa-chevron-circle-down {
+  margin-right: 20px;
+}
+nav > div {
+  margin-left: 25px;
+}
+nav .options ul {
+  display: flex;
+  list-style-type: none;
+}
+nav .options ul li {
+  margin-right: 25px;
+}
+.icons {
+  color: whitesmoke;
+  text-decoration: none;
+}
+/* Navbar Ends */
+
+.intro-section {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+.intro-section img {
+  width: 350px;
+  height: 350px;
+}
+.intro-text-button {
+  margin-right: 40px;
+  padding: 20px;
+}
+.button {
+  background-color: #e91e63;
+  border-radius: 10px;
+  padding: 10px;
+  color: aliceblue;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Companies */
+.company ul {
+  display: flex;
+  list-style-type: none;
+  column-gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  /* justify-content: center; */
+}
+hr {
+  height: 1px;
+  width: 90%;
+  background-color: #e91e63;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+/* Popular Collection */
+.popular-collection {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 30px;
+}
+.item {
+  box-shadow: 2px 2px 4px grey;
+  padding: 15px;
+}
+.item img {
+  height: 200px;
+  width: 200px;
+}
+.see-more {
+  padding: 6px;
+}
+a{
+    text-decoration: none;
+}
+/* Featured products */
+.featured-product {
+  width: 80%;
+  display: flex;
+  padding: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+.featured-text {
+  margin-left: 40px;
+}
+/* Footer */
+footer {
+  background-color: #101632;
+  color: aliceblue;
+  padding: 10px;
+  text-align: center;
+}
+.footer-icons a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.footer-icons {
+  margin-bottom: 15px;
+}
+.footer-text {
+  margin-bottom: 15px;
+}
+/* Animation */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(220deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.intro-section img:hover {
+  animation: rotation 2s ease-in-out 0.1s 2 alternate;
+}
+
+/* Meida Query for phones*/
+@media screen and (max-width: 688px) {
+  nav .options {
+    display: none;
+  }
+
+  nav .dropdown {
+    display: block;
+  }
+
+  /* .dropdown-icon:focus .dropdown>ul{
+        display: none;
+    } */
+
+  .intro-section {
+    width: 100%;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .intro-section img {
+    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    order: -1;
+  }
+  .intro-text-button {
+    margin-top: 20px;
+    margin-right: 0%;
+    padding: 15px;
+  }
+
+  .popular-collection {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .featured-product {
+    width: 80%;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .featured-text {
+    margin-left: 0px;
+  }
+  .featured-product img{
+    height: 200px;
+}
+}
+
+/* Meida Query for tablets*/
+/* @media screen and (max-width: 980px){ */
+/* 
+  .featured-product {
+    display: none;
+  } */
+/* 
+  .intro-section {
+    width: 90%;
+  }
+  .intro-section img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .popular-collection {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-product {
+    width: 90%;
+  }
+  .featured-product img{
+      height: 200px;
+  }
+} */
