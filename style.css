@@ -179,7 +179,7 @@ footer {
 }
 
 /* Media Query for phones*/
-@media (max-width: 688px) {
+@media only screen and (max-width: 688px) {
   nav .options {
     display: none;
   }
@@ -212,7 +212,7 @@ footer {
 
   .popular-collection {
     width: 90%;
-    grid-template-columns: repeat(1, 1fr) !important; 
+    grid-template-columns: repeat(1, 1fr) 
   }
   .featured-product {
     width: 80%;
@@ -230,11 +230,7 @@ footer {
 }
 
 /* Meida Query for tablets*/
-@media (max-width: 980px){ 
-
-  .featured-product {
-    display: none;
-  } 
+@media only screen and (min-width: 689px) and (max-width: 980px){ 
 
   .intro-section {
     width: 90%;
